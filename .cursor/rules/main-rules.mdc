@@ -1,0 +1,48 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# CodeStitch Rules - autopoleerimine.ee
+
+## Core CodeStitch Standards
+- **ALWAYS** use `cs-` prefixed classes (`.cs-container`, `.cs-content`, `.cs-title`, `.cs-text`, `.cs-topper`)
+- Follow CodeStitch component patterns: container → content → elements structure
+- Section IDs: `#component-number` format (`#hero-1059`, `#sbs-r-870`)
+- Use CodeStitch's responsive breakpoint methodology
+
+## Color & Design System
+- **NEVER** hardcode colors - use `:root` variables, like: `var(--primary)`, `var(--secondary)`, `var(--headerColor)`, `var(--bodyTextColor)`, `var(--background)`
+- Premium auto detailing aesthetic: Clean, modern, trustworthy
+- Estonian market considerations
+
+## Typography & Content
+- Font system: `var(--headerFont)`, `var(--bodyFont)` (Manrope)
+- Size system: `var(--headerFontSize)`, `var(--bodyFontSize)`, `var(--topperFontSize)`
+- Hierarchy: mostly not needed(`.cs-topper`) → `.cs-title` → `.cs-text`
+- All content in Estonian, auto detailing terminology
+
+## Layout & Components
+- Spacing: `var(--sectionPadding)` for sections
+- Responsive: `clamp()` functions, mobile-first approach
+- Buttons: `.cs-button-solid`, `.cs-button-outline` with transform/shadow hovers
+- Images: `<picture>` elements, `loading="lazy"`, Estonian alt text
+
+## Technical Standards
+- 11ty + Decap CMS compatibility
+- Critical CSS loading pattern
+- LESS in `src/assets/less/`
+- Semantic HTML + proper ARIA labels
+- Modern browser support with progressive enhancement
+
+## Development Workflow
+- Examine existing patterns before changes
+- Parallel tool calls for information gathering
+- Mobile-first responsive testing
+- Maintain premium, professional feel
+- Clean up temporary files
+
+**Focus**: CodeStitch methodology + top tier UI and UX styling with th touch of liquid glass + Estonian auto detailing business excellence
+
+
+

@@ -1,0 +1,576 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.less
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-2184 {
+        padding: var(--sectionPadding);
+        padding-top: clamp(10rem, 11vw, 16rem);
+        background-color: var(--background);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1200/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            max-width: (700/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            margin-bottom: 4rem;
+        }
+
+        .cs-text {
+            width: 100%;
+            max-width: (600/16rem);
+            background: var(--background-800);
+            border: 1px solid var(--background-600);
+            border-radius: 1.25rem;
+            padding: (16/16rem) (20/16rem);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: (12/16rem);
+            margin-bottom: (32/16rem);
+            position: relative;
+
+            p {
+                margin: 0;
+                font-size: (14/16rem);
+                font-weight: 400;
+                line-height: 1.5;
+                color: var(--bodyTextColor);
+                text-align: left;
+                opacity: 0.9;
+            }
+        }
+
+        .cs-attention-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: (2/16rem);
+        }
+
+        .cs-services-grid {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(3.5rem, 7vw, 4.5rem);
+        }
+
+        .cs-category {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: (32/16rem);
+        }
+
+        .cs-category-title {
+            font-size: clamp(1.9rem, 4vw, 2.2rem);
+            font-weight: 600;
+            margin: 0;
+            position: relative;
+            color: var(--headerColor);
+            
+            
+
+            span {
+            font-style: italic;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: var(--background-200);
+            color: transparent;
+            padding-right: 0.5rem;
+            }
+        }
+
+        .cs-services-list {
+            display: flex;
+            flex-direction: column;
+            gap: (20/16rem);
+        }
+
+        .cs-service-item {
+            display: flex;
+            flex-direction: column;
+            gap: (18/16rem);
+            padding: (22/16rem) (24/16rem);
+            background: var(--background-900);
+            border: 1px solid var(--background-700);
+            border-radius: (20/16rem);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, var(--primary), rgba(255, 255, 255, 0.2));
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                pointer-events: none;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+                border-color: var(--primary);
+                
+                &::before {
+                    transform: scaleX(1);
+                }
+                
+                &::after {
+                    opacity: 1;
+                }
+                
+                .cs-service-name {
+                    color: var(--primary);
+                }
+                
+                .cs-price-main {
+                    transform: scale(1.05);
+                    color: var(--primary);
+                }
+                
+                .cs-service-time {
+                    background: var(--primary);
+                    color: white;
+                    border-color: var(--primary);
+                    
+                    .cs-time-icon {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .cs-service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: (18/16rem);
+        }
+
+        .cs-service-name {
+            font-size: (15/16rem);
+            font-weight: 500;
+            color: var(--headerColor);
+            margin: 0;
+        }
+
+        .cs-service-description {
+            font-size: (14/16rem);
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--bodyTextColor);
+            opacity: 0.75;
+            margin: 0;
+            text-align: left;
+            letter-spacing: -0.01em;
+            transition: all 0.3s ease;
+        }
+
+        .cs-service-time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: (6/16rem);
+            font-size: (12/16rem);
+            color: var(--bodyTextColor);
+            font-weight: 500;
+            opacity: 0.9;
+            padding: (6/16rem) (12/16rem);
+            background: var(--background-800);
+            border-radius: (20/16rem);
+            border: 1px solid var(--background-600);
+            flex-shrink: 0;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            letter-spacing: -0.01em;
+            min-height: (26/16rem);
+            min-width: (68/16rem);
+            white-space: nowrap;
+        }
+
+        .cs-time-icon {
+            width: (14/16rem);
+            height: (14/16rem);
+            color: var(--primary);
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .cs-service-price {
+            display: flex;
+            align-items: baseline;
+            gap: (3/16rem);
+            position: relative;
+        }
+
+        .cs-price-prefix {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--bodyTextColor);
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .cs-price-main {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--bodyTextColor);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            opacity: 0.9;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, var(--primary), transparent);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .cs-service-item:hover .cs-price-main::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+/* Small Mobile - 480px */
+@media only screen and (min-width: 30rem) {
+    #pricing-2184 {
+        .cs-service-item {
+            padding: (24/16rem) (26/16rem);
+            gap: (20/16rem);
+        }
+
+        .cs-service-name {
+            font-size: (16/16rem);
+        }
+
+        .cs-service-time {
+            font-size: (13/16rem);
+            padding: (7/16rem) (14/16rem);
+            min-height: (28/16rem);
+            min-width: (76/16rem);
+        }
+
+        .cs-price-main {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-2184 {
+        .cs-container {
+            gap: clamp(4rem, 7vw, 5rem);
+        }
+
+        .cs-text {
+            max-width: (550/16rem);
+            padding: (18/16rem) (24/16rem);
+            gap: (14/16rem);
+            margin-bottom: (40/16rem);
+
+            p {
+                font-size: (15/16rem);
+            }
+        }
+
+        .cs-attention-icon {
+            width: (22/16rem);
+            height: (22/16rem);
+        }
+
+        .cs-services-grid {
+            gap: clamp(4.5rem, 8vw, 5.5rem);
+        }
+
+        .cs-category {
+            gap: (36/16rem);
+        }
+
+        .cs-category-title {
+            font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+            padding-bottom: (20/16rem);
+            
+            &::after {
+                width: (80/16rem);
+                height: 3px;
+            }
+        }
+
+        .cs-services-list {
+            gap: (24/16rem);
+        }
+
+        .cs-service-item {
+            padding: (26/16rem) (30/16rem);
+            gap: (22/16rem);
+            border-radius: (24/16rem);
+            
+            &:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        .cs-service-header {
+            gap: (22/16rem);
+        }
+
+        .cs-service-name {
+            font-size: (17/16rem);
+        }
+
+        .cs-service-time {
+            font-size: (13/16rem);
+            padding: (8/16rem) (16/16rem);
+            gap: (7/16rem);
+            min-height: (30/16rem);
+            min-width: (80/16rem);
+        }
+
+        .cs-time-icon {
+            width: (16/16rem);
+            height: (16/16rem);
+        }
+
+        .cs-price-prefix {
+            font-size: 0.8125rem;
+        }
+
+        .cs-price-main {
+            font-size: 1.375rem;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #pricing-2184 {
+        .cs-container {
+            gap: clamp(5rem, 8vw, 6rem);
+        }
+
+        .cs-text {
+            max-width: (500/16rem);
+            padding: (20/16rem) (28/16rem);
+            gap: (16/16rem);
+            margin-bottom: (48/16rem);
+
+            p {
+                font-size: (15/16rem);
+            }
+        }
+
+        .cs-attention-icon {
+            width: (24/16rem);
+            height: (24/16rem);
+        }
+
+        .cs-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: clamp(5rem, 7vw, 6rem);
+            align-items: flex-start;
+        }
+
+        .cs-category {
+            height: fit-content;
+            gap: (40/16rem);
+        }
+
+        .cs-category-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            padding-bottom: (22/16rem);
+            
+            &::after {
+                width: (100/16rem);
+            }
+        }
+
+        .cs-services-list {
+            gap: (28/16rem);
+        }
+
+        .cs-service-item {
+            padding: (30/16rem) (34/16rem);
+            gap: (24/16rem);
+            border-radius: (28/16rem);
+
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+            }
+        }
+
+        .cs-service-header {
+            gap: (26/16rem);
+        }
+
+        .cs-service-name {
+            font-size: (18/16rem);
+            line-height: 1.25;
+        }
+
+        .cs-service-time {
+            font-size: (14/16rem);
+            padding: (9/16rem) (18/16rem);
+            gap: (8/16rem);
+            min-height: (32/16rem);
+            min-width: (85/16rem);
+        }
+
+        .cs-time-icon {
+            width: (18/16rem);
+            height: (18/16rem);
+        }
+
+        .cs-price-prefix {
+            font-size: 0.875rem;
+        }
+
+        .cs-price-main {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* Large Desktop - 1440px */
+@media only screen and (min-width: 90rem) {
+    #pricing-2184 {
+        .cs-text {
+            padding: (22/16rem) (32/16rem);
+            gap: (18/16rem);
+            margin-bottom: (56/16rem);
+
+            p {
+                font-size: (16/16rem);
+            }
+        }
+
+        .cs-attention-icon {
+            width: (26/16rem);
+            height: (26/16rem);
+        }
+
+        .cs-services-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: (80/16rem);
+        }
+
+        .cs-category {
+            gap: (44/16rem);
+        }
+
+        .cs-category-title {
+            font-size: (2.75rem);
+            padding-bottom: (24/16rem);
+            
+            &::after {
+                width: (120/16rem);
+                height: 3px;
+            }
+        }
+
+        .cs-services-list {
+            gap: (32/16rem);
+        }
+
+        .cs-service-item {
+            padding: (34/16rem) (38/16rem);
+            gap: (26/16rem);
+            border-radius: (32/16rem);
+            
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .cs-service-header {
+            gap: (30/16rem);
+        }
+
+        .cs-service-name {
+            font-size: (20/16rem);
+            font-weight: 500;
+        }
+
+        .cs-service-time {
+            font-size: (15/16rem);
+            padding: (10/16rem) (20/16rem);
+            gap: (9/16rem);
+            min-height: (34/16rem);
+            min-width: (90/16rem);
+        }
+
+        .cs-time-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+        }
+
+        .cs-price-prefix {
+            font-size: 0.9375rem;
+        }
+
+        .cs-price-main {
+            font-size: 1.75rem;
+        }
+    }
+}
+                                

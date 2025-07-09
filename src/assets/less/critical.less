@@ -263,13 +263,22 @@
             align-items: center;
         }
 
+        .cs-topper {
+            color: var(--primary);
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: none;
+            margin-bottom: 0.5rem;
+    }
+
         .cs-title {
             /* 17 characters wide including spaces */
             max-width: 17ch;
         }
 
         .text-box{
-            margin: 1rem 0 0 0;
+            margin: 3rem 0 0 0;
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 1.5rem;
@@ -410,16 +419,6 @@
              }
          }
 
-         svg{
-             position: absolute;
-             width: 5rem;
-             height: 5rem;
-             right: -0.5rem;
-             top: 50%;
-             transform: translateY(-50%) rotate(90deg);
-             opacity: 0.3;
-             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
-         }
              
         }
     }

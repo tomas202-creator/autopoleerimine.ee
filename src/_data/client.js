@@ -10,11 +10,11 @@ module.exports = {
         state: "Harju",
         zip: "10145",
         country: "EE",
-        mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
+        mapLink: "https://maps.app.goo.gl/uj8S6iPWijTiuLt1A",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        youtube: "https://www.youtube.com/@autopoleerimine.ee",
+        instagram: "https://www.instagram.com/autopoleerimine.ee/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://www.autopoleerimine.ee",
