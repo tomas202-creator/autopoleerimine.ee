@@ -1,0 +1,104 @@
+---
+title: "Kere taastamine | Autopoleerimine.ee"
+description: "Professionaalne auto kere taastamine teenused. Auto värviparandus ja esitulede taastamine kõrge kvaliteediga."
+permalink: "/restoration/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/restoration.css">
+    <script defer src="/assets/js/wash.js"></script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<div id="content-page-1945">
+    <section class="cs-content-default">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">/ Kere taastamine</span>
+                <h1 class="cs-title">Professionaalne kere taastamine</h1>
+                <p>
+                    Auto kere ei täida ainult esteetilist rolli – see kaitseb sõitjaid, peegeldab omaniku hoolikust ja mõjutab otseselt sõiduki järelturuväärtust. Aja jooksul tekivad igale autole kriimud, värvikahjustused, tuhmuvad tuled ja muud visuaalsed vead, mis rikuvad üldmuljet ja võivad kaasa tuua kiirema korrosiooni või valgustugevuse vähenemise.
+                </p>
+                <p>
+                    Meie kere taastamise teenused on suunatud just nende puuduste professionaalsele parandamisele. Korralik taastamine annab autole uue väljanägemise, parandab ohutust ja aitab säilitada või tõsta auto väärtust.
+                </p>
+                <a href="#contact-1893" class="cs-button-solid">Hinnapäring</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--            Services Navigation               -->
+    <!-- ============================================ -->
+    
+    <section class="cs-services-nav">
+        <div class="cs-container">
+            <div class="cs-nav-links">
+                <a href="#varviparandus" class="cs-nav-link">Värviparandus</a>
+                <a href="#tulede-taastamine" class="cs-nav-link">Tulede taastamine</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--              Auto värviparandus             -->
+    <!-- ============================================ -->
+    
+    <section class="cs-content-wrapper" id="varviparandus">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2>Auto värviparandus</h2>
+                <p>
+                    Värvikahjustused võivad tekkida erinevatel põhjustel – kivitäkked, kriimustused, ukselingi ümbruse hõõrdumine, parklas saadud täkked või oksüdeerumine. Kui värvipind saab kahjustada, ei ole asi ainult välimuses – avatud pind võib hakata roostetama ning kahjustus suureneb kiiresti. Meie auto värviparandus aitab need vead eemaldada kvaliteetselt ja täpselt.
+                </p>
+                <p>
+                    Tuvastame iga värvikahjustuse ulatuse ja valime sobiva parandustehnoloogia – olgu see spot-repair (lokaalne värviparandus), ülevärv või pinnaviimistlus. Kasutame ainult kvaliteetseid värve, mille toon sobitatakse täpselt originaallakiga.
+                </p>
+                <p>
+                    Tulemuseks on visuaalselt nähtamatu parandustöö, kus parandatud koht sulandub ülejäänud kerega. Auto saab tagasi korrektse välimuse ning pind on taas kaitstud keskkonnamõjude eest.
+                </p>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/dad-detailing.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/dad-detailing.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/dad-detailing.jpg" alt="Auto värviparandus protsess" width="324" height="467">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         Esitulede ja tagatulede taastamine  -->
+    <!-- ============================================ -->
+    
+    <section class="cs-content-wrapper cs-content-reverse" id="tulede-taastamine">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2>Esitulede ja tagatulede taastamine</h2>
+                <p>
+                    Tuhmiks muutunud esituled on nii esteetiline kui ohutusalane probleem – hajunud valgusvihk vähendab nähtavust ja häirib vastutulevaid juhte. Paljud autoomanikud ei tea, et tuhmide tulede pärast võib tehniline ülevaatus isegi ebaõnnestuda. Meie tulede taastamise teenus taastab nende läbipaistvuse ja sära.
+                </p>
+                <p>
+                    Taastamine hõlmab mitmeetapilist mehaanilist ja keemilist poleerimist: eemaldame oksüdeerunud kihi, silume pinnad ja katame need UV-kaitsekihiga, mis aeglustab uut tuhmumist. Tulemuseks on selged, läbipaistvad ja optimaalse valgusvõimega tuled, mis näevad välja nagu uued.
+                </p>
+                <p>
+                    Teenust saab teha nii esituledele kui tagatuledele. Võimalik taastada ka udutulesid ja kolmandat pidurituld, sõltuvalt olukorrast.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include 'sections/cta.html' %}
+
+{% endblock %} 

@@ -1,0 +1,393 @@
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-1945 {
+        padding: clamp(2rem, 4vw, 3rem) (16/16rem);
+        padding-top: clamp(10rem, 11vw, 16rem);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        background-color: var(--background-950);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .cs-content {
+            text-align: left;
+            width: 100%;
+            max-width: (764/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        h2 {
+            font-size: (32/16rem);
+            margin-top: (32/16rem);
+        }
+
+        h3 {
+            font-size: (24/16rem);
+            color: var(--primary);
+        }
+
+        h4, h5, h6 {
+            font-size: (20/16rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: (32/16rem);
+        }
+
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--bodyTextColor);
+
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--primary);
+                filter: brightness(120%);
+            }
+        }
+
+        ol {
+            margin: 0 0 (32/16rem) 0;
+            padding-left: (24/16rem);
+            color: var(--headerColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+
+            li {
+                font-size: (16/16rem);
+                line-height: 1.5em;
+                
+                strong {
+                    color: var(--headerColor);
+                }
+
+                p {
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        ul {
+            margin: 0 0 (32/16rem) 0;
+            padding-left: (24/16rem);
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+
+            li {
+                list-style: none;
+                line-height: 1.5em;
+                font-size: (16/16rem);
+                color: inherit;
+                position: relative;
+
+                strong {
+                    color: var(--headerColor);
+                }
+
+                &:before {
+                    /* custom list bullet */
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: (10/16rem);
+                    left: (-12/16rem);
+                }
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: (400/16rem);
+            display: block;
+            position: relative;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: (8/16rem);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #content-page-1945 {
+        padding: var(--sectionPadding);
+        padding-top: clamp(10rem, 11vw, 16rem);
+
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .cs-content {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-content-default .cs-content {
+            text-align: center;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            flex: none;
+            margin-top: 0;
+            max-width: (500/16rem);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---      Services Navigation    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .cs-services-nav {
+        display: none;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .cs-services-nav {
+        display: none;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .cs-services-nav {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: (16/16rem) (32/16rem);
+        background-color: rgba(16, 16, 16, 0.1);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 
+            0 -8px 32px rgba(0, 0, 0, 0.15),
+            0 -2px 8px rgba(0, 0, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cs-nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: (12/16rem);
+        }
+
+        .cs-nav-link {
+            font-size: (14/16rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--bodyTextColor);
+            padding: (14/16rem) (16/16rem);
+            border-radius: (6/16rem);
+            display: block;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0.9;
+            transition: all 0.2s ease;
+            flex: 1;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                color: var(--headerColor);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---    Content Page Reverse    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-1945 {
+        .cs-content-reverse {
+            padding-top: (36/16rem);
+    
+            .cs-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: clamp(2rem, 4vw, 3rem);
+            }
+    
+            .cs-image-group {
+                width: 100%;
+                max-width: (400/16rem);
+                display: block;
+                position: relative;
+                margin-top: (24/16rem);
+                order: -1;
+            }
+    
+            .cs-picture {
+                width: 100%;
+                height: auto;
+                display: block;
+                position: relative;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: (8/16rem);
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}
+
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #content-page-1945 {
+        .cs-content-reverse {
+            .cs-container {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: clamp(3rem, 6vw, 4rem);
+            }
+
+            .cs-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+    
+            .cs-image-group {
+                margin-top: (48/16rem);
+                order: -1;
+                max-width: (600/16rem);
+            }
+        }
+    }
+}
+
+/* Smooth scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset for anchor links to account for fixed header */
+/* Polishing page anchors */
+#taastav-poleerimine,
+#kaitsev-poleerimine,
+#kohtpoleerimine,
+#klaas-poleerimine,
+#keraamiline-kaitse,
+/* Wash page anchors */
+#valispesu,
+#mootoripesu,
+#velgede-suvapuhastus,
+/* Interior page anchors */
+#salongi-puhastus,
+#keemiline-puhastus,
+#naha-keraamika,
+#naha-hooldus,
+/* Film page anchors */
+#riskitsoonide-kiletamine,
+/* Packages page anchors */
+#detailne-pakett,
+#muugieelne-ettevalmistus,
+/* Restoration page anchors */
+#varviparandus,
+#tulede-taastamine,
+/* Other page anchors */
+#kabrioletti-katuse-hooldus,
+#klaaside-tootlus-nanoainega {
+    scroll-margin-top: (120/16rem);
+} 

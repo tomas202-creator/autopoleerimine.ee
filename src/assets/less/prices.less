@@ -115,7 +115,7 @@
         .cs-service-item {
             display: flex;
             flex-direction: column;
-            gap: (18/16rem);
+            gap: 0;
             padding: (22/16rem) (24/16rem);
             background: var(--background-900);
             border: 1px solid var(--background-700);
@@ -153,35 +153,6 @@
 
             &:hover {
                 transform: translateY(-4px);
-                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-                border-color: var(--primary);
-                
-                &::before {
-                    transform: scaleX(1);
-                }
-                
-                &::after {
-                    opacity: 1;
-                }
-                
-                .cs-service-name {
-                    color: var(--primary);
-                }
-                
-                .cs-price-main {
-                    transform: scale(1.05);
-                    color: var(--primary);
-                }
-                
-                .cs-service-time {
-                    background: var(--primary);
-                    color: white;
-                    border-color: var(--primary);
-                    
-                    .cs-time-icon {
-                        color: white;
-                    }
-                }
             }
         }
 
@@ -191,6 +162,7 @@
             align-items: center;
             width: 100%;
             gap: (18/16rem);
+            margin-bottom: (8/16rem);
         }
 
         .cs-service-name {
@@ -246,6 +218,7 @@
             align-items: baseline;
             gap: (3/16rem);
             position: relative;
+            margin-top: (16/16rem);
         }
 
         .cs-price-prefix {
@@ -281,9 +254,7 @@
             }
         }
 
-        .cs-service-item:hover .cs-price-main::after {
-            transform: scaleX(1);
-        }
+
     }
 }
 
@@ -292,7 +263,7 @@
     #pricing-2184 {
         .cs-service-item {
             padding: (24/16rem) (26/16rem);
-            gap: (20/16rem);
+            gap: 0;
         }
 
         .cs-service-name {
@@ -359,17 +330,17 @@
 
         .cs-service-item {
             padding: (26/16rem) (30/16rem);
-            gap: (22/16rem);
+            gap: 0;
             border-radius: (24/16rem);
             
             &:hover {
                 transform: translateY(-6px);
-                box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
             }
         }
 
         .cs-service-header {
             gap: (22/16rem);
+            margin-bottom: (10/16rem);
         }
 
         .cs-service-name {
@@ -395,6 +366,10 @@
 
         .cs-price-main {
             font-size: 1.375rem;
+        }
+        
+        .cs-service-price {
+            margin-top: (20/16rem);
         }
     }
 }
@@ -449,17 +424,17 @@
 
         .cs-service-item {
             padding: (30/16rem) (34/16rem);
-            gap: (24/16rem);
+            gap: 0;
             border-radius: (28/16rem);
 
             &:hover {
                 transform: translateY(-8px);
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
             }
         }
 
         .cs-service-header {
             gap: (26/16rem);
+            margin-bottom: (12/16rem);
         }
 
         .cs-service-name {
@@ -486,6 +461,10 @@
 
         .cs-price-main {
             font-size: 1.5rem;
+        }
+        
+        .cs-service-price {
+            margin-top: (24/16rem);
         }
     }
 }
@@ -533,17 +512,17 @@
 
         .cs-service-item {
             padding: (34/16rem) (38/16rem);
-            gap: (26/16rem);
+            gap: 0;
             border-radius: (32/16rem);
             
             &:hover {
                 transform: translateY(-10px);
-                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
             }
         }
 
         .cs-service-header {
             gap: (30/16rem);
+            margin-bottom: (14/16rem);
         }
 
         .cs-service-name {
@@ -570,6 +549,10 @@
 
         .cs-price-main {
             font-size: 1.75rem;
+        }
+        
+        .cs-service-price {
+            margin-top: (28/16rem);
         }
     }
 }
