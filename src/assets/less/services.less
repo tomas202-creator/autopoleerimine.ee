@@ -25,10 +25,29 @@
         .cs-content {
             text-align: left;
             width: 100%;
-            max-width: (764/16rem);
+            max-width: 60rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        .cs-content-default {
+            padding: clamp(2rem, 4vw, 3rem) 0;
+            width: 94%;
+            margin: 0 auto;
+            
+            .cs-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: clamp(2rem, 4vw, 3rem);
+            }
+
+            .cs-content {
+                order: 1;
+                text-align: center;
+                align-items: center;
+            }
         }
 
         .cs-title {
@@ -51,7 +70,7 @@
         }
 
         h2 {
-            font-size: (32/16rem);
+            font-size: (28/16rem);
             margin-top: (32/16rem);
         }
 
@@ -153,6 +172,7 @@
             max-width: (400/16rem);
             display: block;
             position: relative;
+            margin-top: (32/16rem);
         }
 
         .cs-picture {
@@ -172,31 +192,179 @@
     }
 }
 
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-1945 {
+        padding: clamp(3.75rem, 7.82vw, 6.25rem) 0rem;
+        padding-top: clamp(10rem, 11vw, 16rem);
+
+        .cs-container {
+            gap: clamp(2rem, 4vw, 3rem);
+        }
+
+        .cs-content {
+            width: 94%;
+        }
+
+        .cs-content-default {
+            padding: clamp(3rem, 5vw, 4rem) 0;
+            width: 94%;
+            margin: 0 auto;
+            
+            .cs-container {
+                gap: clamp(3rem, 5vw, 4rem);
+            }
+
+            .cs-content {
+                max-width: (60rem);
+                margin: 0 auto;
+            }
+        }
+
+        .cs-image-group {
+            max-width: (480/16rem);
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 2.8vw, 2rem);
+            margin-top: clamp(2rem, 4vw, 3rem);
+        }
+    }
+}
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #content-page-1945 {
         padding: var(--sectionPadding);
-        padding-top: clamp(10rem, 11vw, 16rem);
+        padding-top: clamp(8.5rem, 10vw, 14rem);
 
         .cs-container {
             flex-direction: row;
             align-items: flex-start;
+            gap: clamp(3rem, 6vw, 5rem);
+            max-width: (60rem);
+            margin: 0 auto;
         }
 
         .cs-content {
             text-align: left;
             align-items: flex-start;
+            flex: 1;
+            max-width: none;
         }
 
         .cs-content-default .cs-content {
             text-align: center;
             align-items: center;
+            max-width: (60rem);
+            margin: 0 auto;
+        }
+
+        .cs-content-default {
+            padding: clamp(2rem, 4vw, 3rem) 0;
+            
+            .cs-container {
+                max-width: (60rem);
+                margin: 0 auto;
+                gap: clamp(4rem, 6vw, 5rem);
+            }
+
+            .cs-content {
+                text-align: center;
+                align-items: center;
+                max-width: (60rem);
+                margin: 0 auto;
+            }
         }
 
         .cs-image-group {
             flex: none;
             margin-top: 0;
-            max-width: (500/16rem);
+            max-width: (60rem);
+            width: (520/16rem);
+        }
+
+        h2 {
+            font-size: (2.1rem);
+            margin-top: 0;
+        }
+
+        .cs-content-wrapper {
+            padding: clamp(4rem, 6vw, 5rem) 0;
+            
+            .cs-container {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: clamp(4rem, 6vw, 5rem);
+                max-width: (60rem);
+                margin: 0 auto;
+            }
+
+            .cs-content {
+                flex: 1;
+                text-align: left;
+                align-items: flex-start;
+                max-width: none;
+                margin: 0;
+                order: 1;
+            }
+    
+            .cs-image-group {
+                flex: none;
+                order: 2;
+                max-width: (60rem);
+                width: (500/16rem);
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #content-page-1945 {
+        .cs-container {
+            gap: clamp(4rem, 8vw, 6rem);
+            max-width: (60rem);
+            margin: 0 auto;
+        }
+
+        .cs-content-default {
+            padding: clamp(5rem, 8vw, 6rem) 0;
+            
+            .cs-container {
+                gap: clamp(5rem, 8vw, 6rem);
+                max-width: (60rem);
+                margin: 0 auto;
+            }
+
+            .cs-content {
+                text-align: center;
+                align-items: center;
+                max-width: (60rem);
+                margin: 0 auto;
+            }
+        }
+
+        .cs-image-group {
+            max-width: (60rem);
+            width: (600/16rem);
+        }
+
+        .cs-content-wrapper {
+            padding: clamp(5rem, 8vw, 6rem) 0;
+            
+            .cs-container {
+                gap: clamp(5rem, 8vw, 6rem);
+                max-width: (60rem);
+                margin: 0 auto;
+            }
+
+            .cs-image-group {
+                max-width: (60rem);
+                width: (580/16rem);
+            }
         }
     }
 }
@@ -208,46 +376,22 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     .cs-services-nav {
-        display: none;
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    .cs-services-nav {
-        display: none;
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    .cs-services-nav {
         display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        padding: (16/16rem) (32/16rem);
-        background-color: rgba(16, 16, 16, 0.1);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 
-            0 -8px 32px rgba(0, 0, 0, 0.15),
-            0 -2px 8px rgba(0, 0, 0, 0.08),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        overflow: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        padding: (16/16rem) (16/16rem);
+        background-color: rgba(16, 16, 16, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: sticky;
+        top: clamp(3.5rem, 8vw, 5rem);
+        z-index: 50;
+        margin-bottom: (24/16rem);
 
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0;
             position: relative;
             z-index: 2;
         }
@@ -255,27 +399,128 @@
         .cs-nav-links {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             width: 100%;
+            gap: (8/16rem);
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .cs-nav-link {
+            font-size: (13/16rem);
+            font-weight: 600;
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--bodyTextColor);
+            padding: (10/16rem) (14/16rem);
+            border-radius: (20/16rem);
+            display: block;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            flex: 0 0 auto;
+
+            &:hover {
+                color: var(--primary);
+                opacity: 1;
+                border-color: var(--primary);
+                background: rgba(255, 255, 255, 0.05);
+                transform: scale(1.02);
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .cs-services-nav {
+        padding: (24/16rem) (32/16rem);
+        background-color: rgba(16, 16, 16, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        position: sticky;
+        top: clamp(4rem, 8vw, 6rem);
+        z-index: 50;
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+        overflow-x: visible;
+
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-nav-links {
+            justify-content: center;
+            width: 100%;
+            min-width: auto;
+            gap: (8/16rem);
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .cs-nav-link {
+            font-size: (14/16rem);
+            padding: (12/16rem) (16/16rem);
+            border-radius: (6/16rem);
+            flex-shrink: 1;
+
+            &:hover {
+                transform: translateY(-1px);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .cs-services-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        z-index: 100;
+        padding: (8/16rem) (32/16rem);
+        margin-bottom: 0;
+        background-color: rgba(16, 16, 16, 0.1);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: none;
+        box-shadow: 
+            0 -8px 32px rgba(0, 0, 0, 0.15),
+            0 -2px 8px rgba(0, 0, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+        .cs-nav-links {
+            justify-content: space-between;
             gap: (12/16rem);
+            flex-wrap: nowrap;
         }
 
         .cs-nav-link {
             font-size: (14/16rem);
             font-weight: 700;
-            line-height: 1.2em;
-            text-decoration: none;
-            color: var(--bodyTextColor);
             padding: (14/16rem) (16/16rem);
-            border-radius: (6/16rem);
-            display: block;
-            text-align: center;
-            white-space: nowrap;
-            opacity: 0.9;
-            transition: all 0.2s ease;
             flex: 1;
+            border: none;
             border-right: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0;
+            opacity: 0.9;
+            background: transparent;
 
             &:last-child {
                 border-right: none;
@@ -284,35 +529,49 @@
             &:hover {
                 color: var(--headerColor);
                 opacity: 1;
+                border-color: transparent;
+                transform: none;
+                background: transparent;
+            }
+
+            &:active {
+                transform: none;
             }
         }
     }
 }
 
 /*-- -------------------------- -->
-<---    Content Page Reverse    -->
+<---      Content Wrapper        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #content-page-1945 {
-        .cs-content-reverse {
-            padding-top: (36/16rem);
-    
+        .cs-content-wrapper {
+            padding: clamp(2rem, 4vw, 3rem) 0;
+            width: 94%;
+            margin: 0 auto;
+            
             .cs-container {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+                justify-content: flex-start;
                 gap: clamp(2rem, 4vw, 3rem);
+            }
+
+            .cs-content {
+                order: 1;
             }
     
             .cs-image-group {
+                order: 2;
                 width: 100%;
                 max-width: (400/16rem);
                 display: block;
                 position: relative;
-                margin-top: (24/16rem);
-                order: -1;
+                margin-top: 0;
             }
     
             .cs-picture {
@@ -333,25 +592,60 @@
     }
 }
 
-/* Large Desktop 1300px */
-@media only screen and (min-width: 81.25rem) {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
     #content-page-1945 {
-        .cs-content-reverse {
+        .cs-content-wrapper {
+            padding: clamp(3rem, 5vw, 4rem) 0;
+            width: 94%;
+            margin: 0 auto;
+            
             .cs-container {
-                flex-direction: row;
-                align-items: flex-start;
-                gap: clamp(3rem, 6vw, 4rem);
+                gap: clamp(3rem, 5vw, 4rem);
             }
 
             .cs-content {
-                text-align: left;
-                align-items: flex-start;
+                max-width: (60rem);
+                margin: 0 auto;
             }
     
             .cs-image-group {
-                margin-top: (48/16rem);
-                order: -1;
-                max-width: (600/16rem);
+                max-width: (500/16rem);
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---    Content Page Reverse    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-1945 {
+        .cs-content-reverse {
+            .cs-content {
+                order: 2;
+            }
+
+            .cs-image-group {
+                order: 1;
+            }
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #content-page-1945 {
+        .cs-content-reverse {
+            .cs-content {
+                order: 2;
+            }
+
+            .cs-image-group {
+                order: 1;
             }
         }
     }
@@ -362,32 +656,76 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Offset for anchor links to account for fixed header */
-/* Polishing page anchors */
+/* Offset for anchor links to account for fixed header and navigation */
+/* Mobile scroll offset */
 #taastav-poleerimine,
 #kaitsev-poleerimine,
 #kohtpoleerimine,
 #klaas-poleerimine,
 #keraamiline-kaitse,
-/* Wash page anchors */
 #valispesu,
 #mootoripesu,
 #velgede-suvapuhastus,
-/* Interior page anchors */
 #salongi-puhastus,
 #keemiline-puhastus,
 #naha-keraamika,
 #naha-hooldus,
-/* Film page anchors */
 #riskitsoonide-kiletamine,
-/* Packages page anchors */
 #detailne-pakett,
 #muugieelne-ettevalmistus,
-/* Restoration page anchors */
 #varviparandus,
 #tulede-taastamine,
-/* Other page anchors */
 #kabrioletti-katuse-hooldus,
 #klaaside-tootlus-nanoainega {
-    scroll-margin-top: (120/16rem);
+    scroll-margin-top: (140/16rem);
+}
+
+/* Tablet scroll offset */
+@media only screen and (min-width: 48rem) {
+    #taastav-poleerimine,
+    #kaitsev-poleerimine,
+    #kohtpoleerimine,
+    #klaas-poleerimine,
+    #keraamiline-kaitse,
+    #valispesu,
+    #mootoripesu,
+    #velgede-suvapuhastus,
+    #salongi-puhastus,
+    #keemiline-puhastus,
+    #naha-keraamika,
+    #naha-hooldus,
+    #riskitsoonide-kiletamine,
+    #detailne-pakett,
+    #muugieelne-ettevalmistus,
+    #varviparandus,
+    #tulede-taastamine,
+    #kabrioletti-katuse-hooldus,
+    #klaaside-tootlus-nanoainega {
+        scroll-margin-top: (180/16rem);
+    }
+}
+
+/* Desktop scroll offset */
+@media only screen and (min-width: 64rem) {
+    #taastav-poleerimine,
+    #kaitsev-poleerimine,
+    #kohtpoleerimine,
+    #klaas-poleerimine,
+    #keraamiline-kaitse,
+    #valispesu,
+    #mootoripesu,
+    #velgede-suvapuhastus,
+    #salongi-puhastus,
+    #keemiline-puhastus,
+    #naha-keraamika,
+    #naha-hooldus,
+    #riskitsoonide-kiletamine,
+    #detailne-pakett,
+    #muugieelne-ettevalmistus,
+    #varviparandus,
+    #tulede-taastamine,
+    #kabrioletti-katuse-hooldus,
+    #klaaside-tootlus-nanoainega {
+        scroll-margin-top: (120/16rem);
+    }
 } 

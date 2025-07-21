@@ -16,9 +16,10 @@
         text-align: center;
         padding: var(--sectionPadding);
         padding-top: clamp(10rem, 11vw, 16rem);
+        background-color: var(--background-950);
 
         .cs-container {
-            width: 100%;
+            width: 94%;
             /* changes to 1280px at tablet */
             max-width: (550/16rem);
             margin: auto;
@@ -220,7 +221,7 @@
 @media only screen and (min-width: 48rem) {
     #gallery-453 {
         .cs-container {
-            max-width: (1280/16rem);
+            max-width: 90rem;
         }
 
         .cs-content {
@@ -231,6 +232,7 @@
 
         .cs-flex {
             width: 50%;
+            text-align: left;
         }
 
         .cs-title {
@@ -246,8 +248,19 @@
         }
 
         .cs-image {
-            /* 171px - 305px */
-            width: ~"clamp(10.6875rem, 23.3%, 19.0625rem)";
+            /* 2 images per row on tablet */
+            width: ~"calc(50% - 0.625rem)";
+            aspect-ratio: 16/9;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #gallery-453 {
+        .cs-image {
+            /* 3 images per row on desktop */
+            width: ~"calc(33.33% - 0.84rem)";
             aspect-ratio: 16/9;
         }
     }
