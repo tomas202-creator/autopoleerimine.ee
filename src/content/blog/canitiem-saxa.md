@@ -7,7 +7,7 @@ date: 2023-06-08T15:28:08.486Z
 tags:
     - post
     - featured
-image: /assets/images/dad-detailing.jpg
+image: /assets/images/dad-detailing.webp
 imageAlt: Kitchen
 ---
 

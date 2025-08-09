@@ -5,60 +5,60 @@
 <section id="contact-1893">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">/ Kontakt</span>
-            <h2 class="cs-title">Võtke meiega ühendust</h2>
+            <span class="cs-topper">{{ i18n[page.lang or 'et'].contact.topper }}</span>
+            <h2 class="cs-title">{{ i18n[page.lang or 'et'].contact.title }}</h2>
         </div>
 
         <div class="cs-form-wrapper">
-            <form class="cs-form" id="cs-form-1893" name="Kontakt vorm" method="post" netlify>
+            <form class="cs-form" id="cs-form-1893" name="{{ i18n[page.lang or 'et'].contact.formName }}" method="post" netlify>
                 <div class="cs-form-header">
-                    <h3 class="cs-form-title">Küsige hinnapakkumist</h3>
-                    <p class="cs-form-text">Täitke vorm ning vastame teile 12h jooksul</p>
+                    <h3 class="cs-form-title">{{ i18n[page.lang or 'et'].contact.formTitle }}</h3>
+                    <p class="cs-form-text">{{ i18n[page.lang or 'et'].contact.formText }}</p>
                 </div>
                 
                 <div class="cs-input-group">
                     <label class="cs-label">
-                        <span class="cs-label-text">Nimi *</span>
-                        <input class="cs-input" required type="text" id="name-1893" name="name" placeholder="Teie nimi">
+                        <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.nameLabel }}</span>
+                        <input class="cs-input" required type="text" id="name-1893" name="name" placeholder="{{ i18n[page.lang or 'et'].contact.namePlaceholder }}">
                     </label>
                     <label class="cs-label">
-                        <span class="cs-label-text">Telefon *</span>
-                        <input class="cs-input" required type="tel" id="phone-1893" name="phone" placeholder="+372 5555 5555">
+                        <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.phoneLabel }}</span>
+                        <input class="cs-input" required type="tel" id="phone-1893" name="phone" placeholder="{{ i18n[page.lang or 'et'].contact.phonePlaceholder }}">
                     </label>
                 </div>
 
                 <label class="cs-label">
-                    <span class="cs-label-text">E-post *</span>
-                    <input class="cs-input" required type="email" id="email-1893" name="email" placeholder="teie@email.ee">
+                    <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.emailLabel }}</span>
+                    <input class="cs-input" required type="email" id="email-1893" name="email" placeholder="{{ i18n[page.lang or 'et'].contact.emailPlaceholder }}">
                 </label>
 
                 <label class="cs-label">
-                    <span class="cs-label-text">Auto mark ja mudel</span>
-                    <input class="cs-input" type="text" id="car-1893" name="car" placeholder="Nt. BMW X5 2019">
+                    <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.carLabel }}</span>
+                    <input class="cs-input" type="text" id="car-1893" name="car" placeholder="{{ i18n[page.lang or 'et'].contact.carPlaceholder }}">
                 </label>
 
                 <label class="cs-label">
-                    <span class="cs-label-text">Huvipakkuv teenus</span>
+                    <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.serviceLabel }}</span>
                     <select class="cs-input cs-select" id="service-1893" name="service">
-                        <option value="">Valige teenus</option>
-                        <option value="poleerimine">Poleerimine</option>
-                        <option value="keraamika">Keraamiline kaitse</option>
-                        <option value="kiletamine">Kiletamine kaitsekilega</option>
-                        <option value="keemiline-puhastus">Keemiline puhastus</option>
-                        <option value="välispesu">Välispesu</option>
-                        <option value="välispesu">Salongi puhastus</option>
-                        <option value="välispesu-slong">Salongi puhastus + välispesu</option>
-                        <option value="muu">Muu</option>
+                        <option value="">{{ i18n[page.lang or 'et'].contact.servicePlaceholder }}</option>
+                        <option value="poleerimine">{{ i18n[page.lang or 'et'].contact.services.polishing }}</option>
+                        <option value="keraamika">{{ i18n[page.lang or 'et'].contact.services.ceramic }}</option>
+                        <option value="kiletamine">{{ i18n[page.lang or 'et'].contact.services.film }}</option>
+                        <option value="keemiline-puhastus">{{ i18n[page.lang or 'et'].contact.services.interiorDeep }}</option>
+                        <option value="välispesu">{{ i18n[page.lang or 'et'].contact.services.exteriorWash }}</option>
+                        <option value="salongi-puhastus">{{ i18n[page.lang or 'et'].contact.services.interiorClean }}</option>
+                        <option value="combo">{{ i18n[page.lang or 'et'].contact.services.combo }}</option>
+                        <option value="muu">{{ i18n[page.lang or 'et'].contact.services.other }}</option>
                     </select>
                 </label>
 
                 <label class="cs-label">
-                    <span class="cs-label-text">Täiendav info</span>
-                    <textarea class="cs-input cs-textarea" name="message" id="message-1893" placeholder="Kirjeldage lähemalt oma soove või esitage küsimusi..."></textarea>
+                    <span class="cs-label-text">{{ i18n[page.lang or 'et'].contact.infoLabel }}</span>
+                    <textarea class="cs-input cs-textarea" name="message" id="message-1893" placeholder="{{ i18n[page.lang or 'et'].contact.infoPlaceholder }}"></textarea>
                 </label>
 
                 <button class="cs-button-solid cs-submit" type="submit">
-                    <span class="cs-button-text">Saada päring</span>
+                    <span class="cs-button-text">{{ i18n[page.lang or 'et'].contact.submit }}</span>
                     <svg class="cs-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -72,9 +72,9 @@
                             <path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10Z" stroke="currentColor" stroke-width="2"/>
                             <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h4 class="cs-contact-title">Kiire vastus</h4>
+                        <h4 class="cs-contact-title">{{ i18n[page.lang or 'et'].contact.quickTitle }}</h4>
                     </div>
-                    <p class="cs-contact-text">Vastame kõikidele päringutele 12h jooksul</p>
+                    <p class="cs-contact-text">{{ i18n[page.lang or 'et'].contact.quickText }}</p>
                 </div>
 
                 <div class="cs-contact-card">
@@ -82,7 +82,7 @@
                         <svg class="cs-contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h4 class="cs-contact-title">Telefon</h4>
+                        <h4 class="cs-contact-title">{{ i18n[page.lang or 'et'].contact.phoneTitle }}</h4>
                     </div>
                     <a href="tel:{{ client.phoneForTel }}" class="cs-contact-link">{{ client.phoneFormatted }}</a>
                 </div>
@@ -93,7 +93,7 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
                             <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h4 class="cs-contact-title">E-post</h4>
+                        <h4 class="cs-contact-title">{{ i18n[page.lang or 'et'].contact.emailTitle }}</h4>
                     </div>
                     <a href="mailto:{{ client.email }}" class="cs-contact-link">{{ client.email }}</a>
                 </div>
@@ -104,7 +104,7 @@
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/>
                             <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
                         </svg>
-                        <h4 class="cs-contact-title">Asukoht</h4>
+                        <h4 class="cs-contact-title">{{ i18n[page.lang or 'et'].contact.locationTitle }}</h4>
                     </div>
                     <a href="{{ client.address.mapLink }}" target="_blank" rel="noopener" class="cs-contact-link">
                         {{ client.address.lineOne }}, {{ client.address.lineTwo }}, {{ client.address.zip }}
@@ -128,61 +128,56 @@
     <div class="cs-container">
         <div class="cs-top">
             <div class="cs-footer-section">
-                <a aria-label="tagasi avalehele" class="cs-logo" href="/">
+                <a aria-label="tagasi avalehele" class="cs-logo" href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}">
                     <img class="cs-logo-img" loading="lazy" decoding="async" src="/assets/svgs/logo-white.svg" alt="Autopoleerimine.ee logo" width="200" height="40">
                 </a>
-                <p class="cs-footer-text">
-                    Professionaalne autopoleerimine ja detailing Eestis. Anname teie autole uue elu kvaliteetsete teenuste ja tähelepanuga detailidele.
-                </p>
+                <p class="cs-footer-text">{{ i18n[page.lang or 'et'].footer.description }}</p>
             </div>
 
             <div class="cs-footer-section">
-                <h4 class="cs-footer-title">Teenused</h4>
+                <h4 class="cs-footer-title">{{ i18n[page.lang or 'et'].footer.services }}</h4>
                 <ul class="cs-footer-ul">
                     <li class="cs-footer-li">
-                        <a href="/teenused/poleerimine" class="cs-footer-link">Poleerimine</a>
+                        <a href="{% if page.lang == 'en' %}/en/polishing/{% else %}/polishing/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.polishing }}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/teenused/keraamika" class="cs-footer-link">Keraamiline kaitse</a>
+                        <a href="{% if page.lang == 'en' %}/en/packages/{% else %}/packages/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.ceramic }}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/teenused/kiletamine" class="cs-footer-link">Kiletamine</a>
+                        <a href="{% if page.lang == 'en' %}/en/film/{% else %}/film/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.film }}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/teenused/puhastus" class="cs-footer-link">Keemiline puhastus</a>
+                        <a href="{% if page.lang == 'en' %}/en/interior/{% else %}/interior/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.interior }}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/teenused/komplekt" class="cs-footer-link">Välispesu</a>
+                        <a href="{% if page.lang == 'en' %}/en/wash/{% else %}/wash/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.wash }}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/teenused/komplekt" class="cs-footer-link">Salongi puhastus</a>
+                        <a href="{% if page.lang == 'en' %}/en/other/{% else %}/other/{% endif %}" class="cs-footer-link">{{ i18n[page.lang or 'et'].footer.servicesList.other }}</a>
                     </li>
                 </ul>
             </div>
 
             <div class="cs-footer-section">
-                <h4 class="cs-footer-title">Ettevõte</h4>
+                <h4 class="cs-footer-title">{{ i18n[page.lang or 'et'].footer.company }}</h4>
                 <ul class="cs-footer-ul">
                     <li class="cs-footer-li">
-                        <a href="/meist" class="cs-footer-link">Meist</a>
+                        <a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}" class="cs-footer-link">{% if page.lang == 'en' %} About {% else %} Meist {% endif %}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/galerii" class="cs-footer-link">Galerii</a>
+                        <a href="{% if page.lang == 'en' %}/en/portfolio/{% else %}/portfolio/{% endif %}" class="cs-footer-link">{% if page.lang == 'en' %} Portfolio {% else %} Galerii {% endif %}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/blogi" class="cs-footer-link">Blogi</a>
+                        <a href="{% if page.lang == 'en' %}/en/prices/{% else %}/prices/{% endif %}" class="cs-footer-link">{% if page.lang == 'en' %} Pricing {% else %} Hinnakiri {% endif %}</a>
                     </li>
                     <li class="cs-footer-li">
-                        <a href="/hinnakiri" class="cs-footer-link">Hinnakiri</a>
-                    </li>
-                    <li class="cs-footer-li">
-                        <a href="/korduma-kippuvad-kusimused" class="cs-footer-link">KKK</a>
+                        <a href="{% if page.lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}" class="cs-footer-link">{% if page.lang == 'en' %} Contact {% else %} Kontakt {% endif %}</a>
                     </li>
                 </ul>
             </div>
 
             <div class="cs-footer-section">
-                <h4 class="cs-footer-title">Jälgi meid</h4>
+                <h4 class="cs-footer-title">{{ i18n[page.lang or 'et'].footer.followUs }}</h4>
                 <ul class="cs-social">
                     <li class="cs-social-li">
                         <a href="https://facebook.com/autopoleerimine" class="cs-social-link" aria-label="Facebook" target="_blank" rel="noopener">
@@ -215,19 +210,19 @@
         <div class="cs-bottom">
             <div class="cs-bottom-left">
                 <p class="cs-copyright">
-                    © {% year %} Autopoleerimine.ee - Kõik õigused kaitstud
+                    {{ i18n[page.lang or 'et'].footer.rights | replace('{{year}}', year) }}
                 </p>
             </div>
             <div class="cs-bottom-right">
                 <ul class="cs-legal-ul">
                     <li class="cs-legal-li">
-                        <a href="/privaatsuspoliitika" class="cs-legal-link">Privaatsuspoliitika</a>
+                        <a href="#" class="cs-legal-link">{{ i18n[page.lang or 'et'].footer.privacy }}</a>
                     </li>
                     <li class="cs-legal-li">
-                        <a href="/kasutustingimused" class="cs-legal-link">Kasutustingimused</a>
+                        <a href="#" class="cs-legal-link">{{ i18n[page.lang or 'et'].footer.terms }}</a>
                     </li>
                     <li class="cs-legal-li">
-                        <a href="/koolide-poliitika" class="cs-legal-link">Küpsiste poliitika</a>
+                        <a href="#" class="cs-legal-link">{{ i18n[page.lang or 'et'].footer.cookies }}</a>
                     </li>
                 </ul>
             </div>

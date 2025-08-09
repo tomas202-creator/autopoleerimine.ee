@@ -41,7 +41,6 @@
                 line-height: 1.2;
                 text-transform: capitalize;
                 letter-spacing: 0.025em;
-                font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
                 max-width: 25ch;
             }
 
@@ -64,15 +63,42 @@
             display: block;
             text-decoration: none;
             color: inherit;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             
-            &:hover {
+            // Disable hover effects during animation
+            &.is-animating {
+                pointer-events: none;
+                
+                &:hover {
+                    transform: none;
+                    
+                    .cs-card-inner {
+                        box-shadow: 
+                            0 4px 16px rgba(0, 0, 0, 0.15),
+                            0 1px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .cs-icon-box {
+                        transform: none;
+                        background: var(--primary);
+                        box-shadow: none;
+
+                        svg {
+                            color: var(--bodyTextColor);
+                            filter: none;
+                        }
+                    }
+                }
+            }
+            
+            &:not(.is-animating):hover {
                 transform: translateY(-4px);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 
                 .cs-card-inner {
                     box-shadow: 
                         0 16px 48px rgba(0, 0, 0, 0.25),
                         0 4px 16px rgba(0, 0, 0, 0.15);
+                    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                 .cs-icon-box {
@@ -81,10 +107,12 @@
                     box-shadow: 
                         0 8px 24px rgba(0, 0, 0, 0.3),
                         0 2px 8px rgba(0, 0, 0, 0.2);
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
                     svg {
                         color: var(--headerColor);
                         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                     }
                 }
             }
@@ -115,7 +143,7 @@
             box-shadow: 
                 0 4px 16px rgba(0, 0, 0, 0.15),
                 0 1px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
             .cs-box {
                 width: 100%;
@@ -203,12 +231,13 @@
 
         .cs-content-card {
             padding: 0.938rem 0.625rem;
+            padding-top: 1.2rem;
 
             .cs-service-title {
                 text-transform: capitalize;
                 font-size: clamp(1.2rem, 1.209rem + 0.4364vw, 1.5rem);
                 color: var(--headerColor);
-                margin: 0 0 0.625rem 0;
+                margin: 0 0 1.125rem 0;
                 line-height: 1.2;
                 transition: color 0.3s ease;
             }
@@ -228,8 +257,7 @@
     #services-1628 {
         .cs-card-group {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            gap: 4rem;
         }
 
         .cs-card-inner {
@@ -362,7 +390,7 @@
         .cs-gallery-container {
             display: flex;
             flex-direction: column;
-            gap: clamp(4rem, 6.5vw, 6rem);
+            gap: 6rem;
         }
 
         .cs-service-showcase {
@@ -628,6 +656,10 @@
           .cs-button-solid {
             max-width: 39.375rem;
         }
+
+        .cs-button-solid {
+            max-width: 16rem;
+        }
           
     }
 }
@@ -636,7 +668,7 @@
 @media only screen and (max-width: 30rem) {
     #gallery-1897 {
         .slider-container {
-            height: 350px;
+            height: 300px;
         }
 
         .before-text,
@@ -767,7 +799,7 @@
         text-align: left;
 
         .cs-container {
-            width: 94%;
+            width: 100%;
             max-width: 80rem;
             margin: auto;
             display: flex;
@@ -916,6 +948,9 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #reviews-2244 {
+        .cs-container {
+            width: 94%;
+        }
         .cs-card-group {
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;

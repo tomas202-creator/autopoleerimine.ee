@@ -9,6 +9,7 @@ const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images")
 const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const translations = require("./src/_data/i18n");
 
 // ⚙️ Configuration Files
 const configSitemap = require("./src/config/plugins/sitemap");
@@ -23,7 +24,7 @@ const filterPostDate = require("./src/config/filters/postDate");
 const filterIsoDate = require("./src/config/filters/isoDate");
 const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
     // ═════════════════════════════════════════════════════════════════════════
     // LANGUAGES
     // Using Eleventy's build events to process non-template languages
@@ -71,6 +72,15 @@ module.exports = function (eleventyConfig) {
 
     // Add Eleventy Navigation plugin
     eleventyConfig.addPlugin(pluginNavigation);
+
+    // Internationalization (i18n)
+    // Default locale is Estonian (et); English (en) is the secondary locale
+    const { EleventyI18nPlugin } = await import("@11ty/eleventy");
+    eleventyConfig.addPlugin(EleventyI18nPlugin, {
+        translations,
+        defaultLanguage: "et",
+        fallbackLocales: { "*": "et" },
+    });
 
     // ═════════════════════════════════════════════════════════════════════════
     // PASSTHROUGH COPIES

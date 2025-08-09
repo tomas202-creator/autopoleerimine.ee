@@ -6,7 +6,7 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
-        <a href="/" class="cs-logo" aria-label="back to home">
+        <a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}" class="cs-logo" aria-label="back to home">
             <img src="/assets/svgs/logo-white.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -22,54 +22,64 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}">
-                            Meist
+                        <a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}" class="cs-li-link {% if page.url == "/" or page.url == "/en/" %} cs-active {% endif %}">
+                            {% if page.lang == 'en' %} About {% else %} Meist {% endif %}
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/portfolio/" class="cs-li-link {% if page.url == "/portfolio/" %} cs-active {% endif %}">
-                            Tehtud tööd
+                        <a href="{% if page.lang == 'en' %}/en/portfolio/{% else %}/portfolio/{% endif %}" class="cs-li-link {% if page.url == "/portfolio/" or page.url == "/en/portfolio/" %} cs-active {% endif %}">
+                            {% if page.lang == 'en' %} Portfolio {% else %} Tehtud tööd {% endif %}
                         </a>
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown">
-                        <span class="cs-li-link {% if page.url == "/wash/" or page.url == "/interior/" or page.url == "/polishing/" or page.url == "/restoration/" or page.url == "/film/" or page.url == "/packages/" or page.url == "/other/" %} cs-active {% endif %}">
-                            Teenused
+                        <span class="cs-li-link {% if 
+                            page.url == "/wash/" or page.url == "/interior/" or page.url == "/polishing/" or page.url == "/restoration/" or page.url == "/film/" or page.url == "/packages/" or page.url == "/other/" or
+                            page.url == "/en/wash/" or page.url == "/en/interior/" or page.url == "/en/polishing/" or page.url == "/en/restoration/" or page.url == "/en/film/" or page.url == "/en/packages/" or page.url == "/en/other/"
+                        %} cs-active {% endif %}">
+                            {% if page.lang == 'en' %} Services {% else %} Teenused {% endif %}
                             <img class="cs-drop-icon" src="/assets/svgs/arrow-down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li">
-                                <a href="/wash/" class="cs-li-link cs-drop-link" >Detilinne väispesu jm</a>
+                                <a href="{% if page.lang == 'en' %}/en/wash/{% else %}/wash/{% endif %}" class="cs-li-link cs-drop-link" >{% if page.lang == 'en' %} Exterior wash & more {% else %} Detilinne väispesu jm {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/interior/" class="cs-li-link cs-drop-link">Salongi detailing</a>
+                                <a href="{% if page.lang == 'en' %}/en/interior/{% else %}/interior/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Interior detailing {% else %} Salongi detailing {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/polishing/" class="cs-li-link cs-drop-link">Poleerimine ja keraamika</a>
+                                <a href="{% if page.lang == 'en' %}/en/polishing/{% else %}/polishing/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Polishing & ceramic {% else %} Poleerimine ja keraamika {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/restoration/" class="cs-li-link cs-drop-link">Kere taastustööd</a>
+                                <a href="{% if page.lang == 'en' %}/en/restoration/{% else %}/restoration/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Body restoration {% else %} Kere taastustööd {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/film/" class="cs-li-link cs-drop-link">Kiletamine</a>
+                                <a href="{% if page.lang == 'en' %}/en/film/{% else %}/film/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Paint protection film {% else %} Kiletamine {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/packages/" class="cs-li-link cs-drop-link">Pakett teenused</a>
+                                <a href="{% if page.lang == 'en' %}/en/packages/{% else %}/packages/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Packages {% else %} Pakett teenused {% endif %}</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/other/" class="cs-li-link cs-drop-link">Muud teenused</a>
+                                <a href="{% if page.lang == 'en' %}/en/other/{% else %}/other/{% endif %}" class="cs-li-link cs-drop-link">{% if page.lang == 'en' %} Other services {% else %} Muud teenused {% endif %}</a>
                             </li>
                         </ul>
                     </li>
                     <li class="cs-li">
-                        <a href="/prices/" class="cs-li-link {% if page.url == "/prices/" %} cs-active {% endif %}">
-                            Hinnakiri
+                        <a href="{% if page.lang == 'en' %}/en/prices/{% else %}/prices/{% endif %}" class="cs-li-link {% if page.url == "/prices/" or page.url == "/en/prices/" %} cs-active {% endif %}">
+                            {% if page.lang == 'en' %} Pricing {% else %} Hinnakiri {% endif %}
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}">
-                            Kontakt
+                        <a href="{% if page.lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}" class="cs-li-link {% if page.url == "/contact/" or page.url == "/en/contact/" %} cs-active {% endif %}">
+                            {% if page.lang == 'en' %} Contact {% else %} Kontakt {% endif %}
                         </a>
+                    </li>
+                    <li class="cs-li">
+                        {% if page.lang == 'en' %}
+                            <a href="{{ page.url | replace('/en/', '/') }}" class="cs-li-link">ET</a>
+                        {% else %}
+                            <a href="/en{{ page.url }}" class="cs-li-link">EN</a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,8 @@
+{
+  "lang": "en",
+  "eleventyComputed": {
+    "permalink": "/en/{{ page.fileSlug }}/",
+    "translationKey": "{{ translationKey }}"
+  }
+}
+

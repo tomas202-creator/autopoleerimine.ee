@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
+ // ─────────────────────────────────────────────────────────────────────────────
 // CRITICAL PAGE STYLES
 // Above-the-fold and high-priority styles for the home page's landing section.
 // Put the first section of the home page in here, so it loads immediately.
@@ -20,6 +20,7 @@
         padding-bottom: clamp(10.125rem, 17.5vw, 13.5rem);
         position: relative;
         z-index: 1;
+        background-color: var(--background-950);
 
         .cs-background {
             width: 100%;
@@ -203,7 +204,7 @@
     #hero-1059 {
         padding: clamp(11.5rem, 3.95vw, 13.75rem) 0rem 5rem;
         .cs-container {
-            width: 94%;
+            width: 84%;
             align-items: flex-start;
             justify-content: flex-start;
         }
@@ -240,13 +241,13 @@
                 background: linear-gradient(
                     to right,
                     rgba(0, 0, 0, 0.94) 0%,
-                    rgba(0, 0, 0, 0.94) 2%,
-                    rgba(0, 0, 0, 0) 100%
+                    rgba(0, 0, 0, 0.94) 30%,
+                    rgba(0, 0, 0, 0.11) 100%
                 );
                 opacity: 1;
             }
             &:after{
-                height: 70%;
+                height: 40%;
             }
         }
     }
@@ -266,6 +267,9 @@
 @media only screen and (min-width: 100rem) {
     #hero-1059{
         padding: clamp(15rem, 6.95vw, 17.75rem) 1rem 8rem;
+    }
+    .cs-container{  
+        width: 88%;
     }
 }
 
@@ -345,7 +349,7 @@
             }
 
             .cs-text {
-                font-size: clamp(0.95rem, 1.1vw, 1rem);
+                font-size: 1rem;
                 color: rgba(255,255,255,0.9);
                 line-height: 1.7;
                 font-weight: 400;
@@ -358,7 +362,7 @@
                 
                 span {
                     font-weight: 700;
-                    font-size: 0.95rem;
+                    font-size: 1rem;
                     color: var(--headerColor);
                 }
     
@@ -528,10 +532,10 @@
             padding: 2rem 2rem;
             
             .cs-text {
-                font-size: clamp(1rem, 1.2vw, 1.1rem);
+                font-size: 1rem;
             }
             span{
-                font-size: clamp(1rem, 1.2vw, 1.1rem);
+                font-size: 1rem;
             }
         }
 
@@ -545,42 +549,63 @@
 @media only screen and (min-width: 64rem) {
     #sbs-r-870 {
         padding: clamp(4rem, 7vw, 6rem) 0;
-        text-align: left;
+        text-align: center;
 
         .cs-container {
             width: 94%;
-            flex-direction: row;
+            flex-direction: column;
             max-width: 90rem;
-            justify-content: space-between;
-            align-items: stretch;
-            gap: clamp(4rem, 6vw, 6rem);
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .picture-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80rem;
+            position: relative;
+        }
+
+        .about-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80rem;
+            position: relative;
         }
 
         .cs-content {
-            width: 52%;
-            max-width: none;
-            order: -1;
+            width: 100%;
+            max-width: 70rem;
+            order: 0;
             display: flex;
             flex-direction: column;
-            align-self: stretch;
+            align-items: center;
+            text-align: center;
 
             .cs-topper {
                 &::after {
-                    left: 0;
-                    transform: none;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 
             .cs-title {
-                max-width: 18ch;
+                max-width: none;
                 margin-bottom: 2.5rem;
             }
 
             .text-box {
-                margin-top: 1.5rem;
-                padding: 2.5rem;
+                margin-top: 4rem;
+                padding: 1.5rem 2rem;
+                padding-top: 2rem;
                 text-align: left;
-                flex-grow: 1;
+                width: 60%;
+                max-width: 36rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -593,29 +618,28 @@
                 }
 
                 .cs-text {
-                    font-size: clamp(1rem, 1.2vw, 1.1rem);
+                    font-size: 0.95rem;
                     line-height: 1.7;
                     
                     &:first-of-type {
                         margin-top: 1rem;
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 0.5rem;
                     }
                 }
                 span{
-                    font-size: clamp(1rem, 1.2vw, 1.1rem);
+                    font-size: 1rem;
                 }
             }
         }
 
-        .group {
-            width: 44%;
-            max-width: none;
-            gap: 1.5rem;
-            align-items: stretch;
-            align-self: stretch;
+        .picture-container {
+            width: 60%;
+            max-width: 36rem;
             position: relative;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            
             
             &::before {
                 content: '';
@@ -633,29 +657,33 @@
         .cs-picture {
             max-width: none;
             width: 100%;
-            flex-grow: 1;
-            min-height: clamp(20rem, 25vw, 28rem);
+            height: 30rem;
             border-radius: 2rem;
 
         }
 
         .about {
-            max-width: none;
+            width: 60%;
+            max-width: 36rem;
             flex-direction: row;
             text-align: left;
-            padding: 1.5rem;
-            gap: 1.5rem;
+            padding: 1.2rem;
+            gap: 1.2rem;
             align-items: center;
             flex-shrink: 0;
-            margin-top: auto;
+            background: rgba(255,255,255,0.05);
+            border-radius: 1.5rem;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.08);
 
             .name-description {
                 flex: 1;
                 margin-bottom: 0;
 
                 h3 {
-                    font-size: clamp(1.4rem, 2vw, 1.75rem);
-                    margin-bottom: 0.75rem;
+                    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+                    margin-bottom: 0.5rem;
                 }
 
                 p {
@@ -681,10 +709,13 @@
         }
 
         .cs-content {
-            width: 50%;
+            width: 100%;
+            max-width: 75rem;
 
             .text-box {
-                padding: 3rem;
+                padding: 1.8rem 2.5rem;
+                max-width: 36rem;
+                margin-left: -32%;
                 
                 .star {
                     width: 3.5rem;
@@ -693,16 +724,27 @@
             }
         }
 
-        .group {
-            width: 45%;
+        .picture-section {
+            max-width: 85rem;
+        }
+
+        .about-section {
+            max-width: 85rem;
+        }
+
+        .picture-container {
+            max-width: 36rem;
+            margin-right: -32%;
 
             .cs-picture {
-                height: clamp(25rem, 30vw, 35rem);
+                height: 24rem;
             }
+        }
 
-            .about {
-                padding: 2rem;
-            }
+        .about {
+            max-width: 36rem;
+            margin-left: -32%;
+            padding: 1.5rem;
         }
     }
 }
@@ -712,14 +754,25 @@
     #sbs-r-870 {
         .cs-container {
             gap: clamp(6rem, 10vw, 8rem);
+            max-width: 100rem;
         }
 
         .cs-content {
-            width: 48%;
+            width: 100%;
+            max-width: 80rem;
+
+            .text-box {
+                max-width: 48rem;
+                padding: 2rem 3rem;
+            }
         }
 
-        .group {
-            width: 42%;
+        .picture-section {
+            max-width: 90rem;
+        }
+
+        .about-section {
+            max-width: 90rem;
         }
     }
 }
@@ -727,6 +780,63 @@
 @keyframes float {
     0%, 100% { transform: translateY(-50%) rotate(90deg) translateX(0); }
     50% { transform: translateY(-50%) rotate(90deg) translateX(5px); }
+}
+
+/* Enhanced AOS Animations */
+[data-aos] {
+    pointer-events: none;
+    
+    &.aos-animate {
+        pointer-events: auto;
+    }
+}
+
+/* Custom AOS enhancements for SBS section */
+#sbs-r-870 {
+    [data-aos="fade-in"] {
+        opacity: 0;
+        transition-property: opacity, transform;
+        transform: scale(0.98);
+        
+        &.aos-animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+/* Enhanced transitions for SBS glass morphism elements */
+#sbs-r-870 {
+    .text-box {
+        transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                   backdrop-filter 0.8s ease,
+                   box-shadow 0.8s ease;
+    }
+    
+    .about {
+        transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                   backdrop-filter 0.8s ease,
+                   box-shadow 0.8s ease;
+    }
+    
+    .picture-container {
+        transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        
+        &::before {
+            transition: opacity 0.9s ease;
+        }
+        
+        .cs-picture {
+            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    }
+    
+    /* Smooth content transitions */
+    .cs-content {
+        .cs-topper, .cs-title {
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    }
 }
 
                                 

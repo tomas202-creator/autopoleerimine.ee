@@ -1,35 +1,26 @@
 ---
-title: "Autopoleerimine.ee | Professionaalne autohooldus Eestis alates 2001"
-description: "Eesti vanim ja kogenum autodetailingu ettevõte. Kiletamine, poleerimine, keraamika. Üle 20 aasta kogemust. Kõrgeima kvaliteediga teenused."
-permalink: "/"
-tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+title: "Autopoleerimine.ee | Professional auto detailing in Estonia since 2001"
+description: "Estonia’s most experienced auto detailing company. PPF, polishing, ceramic coatings. 20+ years of trust and quality."
+permalink: "/en/"
+lang: "en"
+tags: "sitemap"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css"/>
-    
-    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if kit.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
-
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css"/>
-        
     {% endif %}
-
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
-    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
-    <!-- {% include "components/home-schema.html" %} -->
 {% endblock %}
 
 {% block body %}
-
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
@@ -37,31 +28,25 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <section id="hero-1059">
     <div class="cs-container">
         <div class="cs-content">
-            <h1 class="cs-title" data-aos="fade-in" data-aos-delay="550" data-aos-duration="600">Detailingu algatajad Eestis
-            </h1>
+            <h1 class="cs-title" data-aos="fade-in" data-aos-delay="550" data-aos-duration="600">Pioneers of detailing in Estonia</h1>
             <p class="cs-text" data-aos="fade-up" data-aos-delay="200" data-aos-duration="450">
-                Kvaliteet, mida teised püüavad järgi teha. Usaldus, mille oleme teeninud aastatega.
+                Quality others try to replicate. Trust we’ve earned over decades.
             </p>
-            <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="450">Kiletamine • poleerimine • keraamika • jm</span>
+            <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="450">PPF • polishing • ceramic • more</span>
             <div class="buttons" data-aos="fade-up" data-aos-delay="300" data-aos-duration="450">
-                <a href="" class="cs-button-solid" data-text="Võta ühendust">Võta ühendust</a>
-                <a href="" class="cs-button-solid secondary">Meie portfoolio</a>
+                <a href="/en/contact/" class="cs-button-solid" data-text="Contact us">Contact us</a>
+                <a href="/en/portfolio/" class="cs-button-solid secondary">Our portfolio</a>
             </div>
-            
-            <div class="reviews-badge" data-aos="fade-up" data-aos-delay="300" data-aos-duration="450">
-                5.0 Google Reviews
-            </div>
-            
+            <div class="reviews-badge" data-aos="fade-up" data-aos-delay="300" data-aos-duration="450">5.0 Google Reviews</div>
         </div>
     </div>
-
-    <!-- Background Image -->
     <picture class="cs-background" data-aos="fade-in" data-aos-delay="700" data-aos-duration="800">
-        <source media="(max-width: 600px)" srcset="assets/images/dad-detailing2.webp">
-        <source media="(min-width: 601px)" srcset="assets/images/dad-detailing.webp">
-        <img decoding="async" src="assets/images/dad-detailing.webp" alt="Marius Simanauskas auto poleerimine" width="2250" height="1500" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="/assets/images/dad-detailing2.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/dad-detailing.webp">
+        <img decoding="async" src="/assets/images/dad-detailing.webp" alt="Marius Simanauskas car polishing" width="2250" height="1500" aria-hidden="true">
     </picture>
-</section>
+    
+ </section>
 
 <!-- ============================================ -->
 <!--             Side By Side Reverse             -->
@@ -69,44 +54,33 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 <section id="sbs-r-870">
     <div class="cs-container">
-        
         <div class="cs-content">
-            <span class="cs-topper">/ Meist</span>
-            <h2 class="cs-title">Usaldus ei sünni üleöö</h2>
+            <span class="cs-topper">/ About</span>
+            <h2 class="cs-title">Trust isn’t built overnight</h2>
             <div class="text-box"  data-aos="fade-in" data-aos-offset="160" data-aos-duration="800" data-aos-delay="0">
-                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ebebeb" class="star"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"></path> </g></svg>
-                <p class="cs-text">
-                    Oleme tegutsenud <span>alates 2001. aastast</span> — ajast, mil detailing polnud Eestis veel tuntud. Selle aja jooksul oleme õppinud kasutama kõige kvaliteetsemaid ja tehniliselt keerukamaid tooteid, mis nõuavad kogemust ja täpsust.
-                </p>
-                <div class="cs-text">
-                    Oleme oma tööle alati lähenenud põhimõttega, et iga auto väärib parimat. Me ei tee kompromisse kvaliteedis ega kiiruses — sest tõeliselt hea tulemus sünnib ainult siis, kui igasse detaili suhtutakse hoolikalt. Just see on põhjus, miks meie juurde tullakse tagasi, ja miks meid usaldavad nii igapäevased autoomanikud kui ka kõige nõudlikumad kliendid.
-                </div>
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ebebeb" class="star"><path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"></path></svg>
+                <p class="cs-text">We’ve been perfecting detailing <span>since 2001</span> — long before it was mainstream in Estonia. Over the years we’ve mastered advanced products and techniques that demand experience and precision.</p>
+                <div class="cs-text">We treat every car as if it were our own. No shortcuts — true quality comes from careful work and attention to detail. That’s why clients return and trust us with their most demanding projects.</div>
             </div>
         </div>
-
         <div class="picture-section">
             <div class="picture-container" data-aos="fade-in" data-aos-offset="160" data-aos-duration="800" data-aos-delay="100">
                 <picture class="cs-picture">
-                    <img loading="lazy" decoding="async" src="assets/images/portrait.webp" alt="therapy" width="630" height="775">
+                    <img loading="lazy" decoding="async" src="/assets/images/portrait.webp" alt="Owner portrait" width="630" height="775">
                 </picture>
             </div>
         </div>
-
         <div class="about-section">
             <div class="about" data-aos="fade-in" data-aos-offset="160" data-aos-delay="200" data-aos-duration="800" >
                 <div class="name-description">
                     <h3>Marius Simanauskas</h3>
-                    <p>Ettevõtte omanik & professionaalne detailer üle 25 aasta</p>
+                    <p>Owner & professional detailer for 25+ years</p>
                 </div>
-                <img src="assets/svgs/signature.svg" alt="">
+                <img src="/assets/svgs/signature.svg" alt="signature">
             </div>
         </div>
-            
-        
     </div>
 </section>
-                                
-                                
 
 <!-- ============================================ -->
 <!--                  Services                    -->
@@ -115,21 +89,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <section id="services-1628">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper" >/ Teenused</span>
-            <h2 class="cs-title">Täiuslikkus peitub detailides</h2>
-            <p class="cs-text">
-                Teeme ainult seda, mille kvaliteedis oleme kindlad. Iga teenus mida pakume on aastatega lihvitud ja praktikas tõestatud.
-            </p>
+            <span class="cs-topper" >/ Services</span>
+            <h2 class="cs-title">Perfection lives in the details</h2>
+            <p class="cs-text">We only offer services we fully trust. Every package has been refined over the years and proven in practice.</p>
         </div>                  
         <div class="cs-card-group">
-            <a href="/polishing/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="0">
+            <a href="/en/polishing/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="0">
                 <div class="cs-card-inner">
                     <div class="cs-box">
                         <div class="cs-img-box">
                             <picture class="cs-picture">
                                 <source media="(max-width: 600px)" srcset="/assets/images/IMG-20230706-WA0009~2.webp">
                                 <source media="(min-width: 601px)" srcset="/assets/images/IMG-20230706-WA0009~2.webp">
-                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230706-WA0009~2.webp" alt="autopoleerimine" width="413" height="420">
+                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230706-WA0009~2.webp" alt="polishing" width="413" height="420">
                             </picture>
                         </div>
                         <div class="cs-icon">
@@ -142,19 +114,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </div>
                 <div class="cs-content-card">
-                    <h3 class="cs-service-title">Poleerimine</h3>
-                    <p class="cs-service-text">Taastame värvi ­läike ja eemaldame kriimustused. Ideaalne lahendus tuhmunud või kulunud pinnale, et auto näeks välja nagu uus.</p>
+                    <h3 class="cs-service-title">Polishing</h3>
+                    <p class="cs-service-text">Restore gloss and remove scratches. Ideal for dull or worn finishes.</p>
                 </div>
             </a>
 
-            <a href="/packages/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="100">
+            <a href="/en/packages/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="100">
                 <div class="cs-card-inner">
                     <div class="cs-box">
                         <div class="cs-img-box">
                             <picture class="cs-picture">
                                 <source media="(max-width: 600px)" srcset="/assets/images/IMG-20230706-WA0010~3.webp">
                                 <source media="(min-width: 601px)" srcset="/assets/images/IMG-20230706-WA0010~3.webp">
-                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230706-WA0010~3.webp" alt="keraamiline kaitse" width="413" height="420">
+                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230706-WA0010~3.webp" alt="ceramic coating" width="413" height="420">
                             </picture>
                         </div>
                         <div class="cs-icon">
@@ -167,19 +139,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </div>
                 <div class="cs-content-card">
-                    <h3 class="cs-service-title">Keraamiline kaitse</h3>
-                    <p class="cs-service-text">Mitmeaastane värvikaitse, mis annab sügava läike, tõrjub mustust, kaitseb UV-kiirguse eest ning vajab vähem hooldust.</p>
+                    <h3 class="cs-service-title">Ceramic coating</h3>
+                    <p class="cs-service-text">Multi‑year paint protection with deep gloss and hydrophobics.</p>
                 </div>
             </a>
 
-            <a href="/interior/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="200">
+            <a href="/en/interior/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="200">
                 <div class="cs-card-inner">
                     <div class="cs-box">
                         <div class="cs-img-box">
                             <picture class="cs-picture">
                                 <source media="(max-width: 600px)" srcset="/assets/images/IMG-20230704-WA0000~2.webp">
                                 <source media="(min-width: 601px)" srcset="/assets/images/IMG-20230704-WA0000~2.webp">
-                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230704-WA0000~2.webp" alt="keemiline puhastus" width="413" height="420">
+                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230704-WA0000~2.webp" alt="interior deep clean" width="413" height="420">
                             </picture>
                         </div>
                         <div class="cs-icon">
@@ -192,19 +164,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </div>
                 <div class="cs-content-card">
-                    <h3 class="cs-service-title">Keemiline puhastus</h3>
-                    <p class="cs-service-text">Eemaldame salongist mustuse, plekid ja ebameeldivad lõhnad. Jätame sisemuse värske, puhta ja uueväärse.</p>
+                    <h3 class="cs-service-title">Interior deep clean</h3>
+                    <p class="cs-service-text">Remove dirt, stains, and odors. Fresh, hygienic, like new.</p>
                 </div>
             </a>
 
-            <a href="/film/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="300">
+            <a href="/en/film/" class="cs-card" data-aos="fade-up" data-aos-offset="120" data-aos-duration="600" data-aos-delay="300">
                 <div class="cs-card-inner">
                     <div class="cs-box">
                         <div class="cs-img-box">
                             <picture class="cs-picture">
                                 <source media="(max-width: 600px)" srcset="/assets/images/IMG-20230630-WA0004~2.webp">
                                 <source media="(min-width: 601px)" srcset="/assets/images/IMG-20230630-WA0004~2.webp">
-                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230630-WA0004~2.webp" alt="kiletamine" width="413" height="420">
+                                <img loading="lazy" decoding="async" src="/assets/images/IMG-20230630-WA0004~2.webp" alt="paint protection film" width="413" height="420">
                             </picture>
                         </div>
                         <div class="cs-icon">
@@ -217,15 +189,13 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </div>
                 <div class="cs-content-card">
-                    <h3 class="cs-service-title">Kiletamine</h3>
-                    <p class="cs-service-text">Kaitseb auto värvi kivitäkete, kriimude ja kulumise eest. Säilitab sõiduki välimuse ja turuväärtuse pikaks ajaks.</p>
+                    <h3 class="cs-service-title">Paint protection film</h3>
+                    <p class="cs-service-text">Invisible protection against chips and scratches.</p>
                 </div>
             </a>
         </div>
     </div>
 </section>
-                                
-                                
 
 <!-- ============================================ -->
 <!--                   Gallery                    -->
@@ -234,30 +204,30 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <section id="gallery-1897">
     <div class="cs-container">
         <div class="cs-content">
-                <span class="cs-topper">/ Pildigalerii</span>
-                <h2 class="cs-title">Mõned töö tulemused</h2>
+                <span class="cs-topper">/ Gallery</span>
+                <h2 class="cs-title">Selected results</h2>
         </div>
         <!--Gallery-->
         <div class="cs-gallery-container">
-            <!-- Service 1: Poleerimine -->
+            <!-- Service 1: Polishing -->
             <div class="cs-service-showcase" data-aos="fade-right" data-aos-offset="200" data-aos-duration="600" data-aos-delay="0">
                 <div class="cs-service-info">
-                    <h3 class="cs-service-title">Autot taastav poleerimine</h3>
-                    <p class="cs-service-description">Kratsid, oksüdeerunud lakk ja mattunud pind saavad uue elu. Meie ekspertide poolt tehtud poleerimine toob tagasi auto algse läike ja sügavuse.</p>
+                    <h3 class="cs-service-title">Restorative polishing</h3>
+                    <p class="cs-service-description">Scratches, oxidized clear, dull finish — restored to depth and gloss.</p>
                     <div class="cs-service-badges">
-                        <span class="cs-badge">Kratsid</span>
-                        <span class="cs-badge">Oksüdeerumine</span>
-                        <span class="cs-badge">Mattunud lakk</span>
+                        <span class="cs-badge">Scratches</span>
+                        <span class="cs-badge">Oxidation</span>
+                        <span class="cs-badge">Dull clear</span>
                     </div>
                 </div>
-                <div class="slider-container" data-service="poleerimine">
+                <div class="slider-container" data-aos="fade-right" data-service="polishing">
                     <div class="before-image">
-                        <img src="/assets/images/IMG-20230706-WA0002~2.webp" alt="Auto enne poleerimist - kratsid ja mattunud lakk">
-                        <div class="before-text">Enne</div>
+                        <img src="/assets/images/IMG-20230706-WA0002~2.webp" alt="Before polishing">
+                        <div class="before-text">Before</div>
                     </div>
                     <div class="after-image">
-                        <img src="/assets/images/IMG-20230706-WA0003~2.webp" alt="Auto pärast poleerimist - läikiv ja sile pind">
-                        <div class="after-text">Pärast</div>
+                        <img src="/assets/images/IMG-20230706-WA0003~2.webp" alt="After polishing">
+                        <div class="after-text">After</div>
                     </div>
                     <div class="slider-handle"></div>
                     <div class="slider-line">
@@ -273,25 +243,25 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </div>
             </div>
 
-            <!-- Service 2: Keemiline Puhastus -->
+            <!-- Service 2: Interior Deep Clean -->
             <div class="cs-service-showcase" data-aos="fade-left" data-aos-offset="200" data-aos-duration="600" data-aos-delay="0">
                 <div class="cs-service-info">
-                    <h3 class="cs-service-title">Keemiline salongi puhastus</h3>
-                    <p class="cs-service-description">Sügavalt sissetöötunud mustus, plekid ja ebameeldivad lõhnad kaovad täielikult. Kasutame professionaalseid kemikaale ja tehnikaid.</p>
+                    <h3 class="cs-service-title">Interior deep clean</h3>
+                    <p class="cs-service-description">Professionally remove embedded dirt, stains and odors.</p>
                     <div class="cs-service-badges">
-                        <span class="cs-badge">Plekid</span>
-                        <span class="cs-badge">Lõhnad</span>
-                        <span class="cs-badge">Sügav mustus</span>
+                        <span class="cs-badge">Stains</span>
+                        <span class="cs-badge">Odors</span>
+                        <span class="cs-badge">Deep dirt</span>
                     </div>
                 </div>
-                <div class="slider-container" data-service="keemiline">
+                <div class="slider-container" data-service="interior">
                     <div class="before-image">
-                        <img src="/assets/images/IMG-20230704-WA0000~2.webp" alt="Auto salongis enne keemilist puhastust">
-                        <div class="before-text">Enne</div>
+                        <img src="/assets/images/IMG-20230704-WA0000~2.webp" alt="Before interior cleaning">
+                        <div class="before-text">Before</div>
                     </div>
                     <div class="after-image">
-                        <img src="/assets/images/IMG-20230704-WA0002~2.webp" alt="Auto salongis pärast keemilist puhastust">
-                        <div class="after-text">Pärast</div>
+                        <img src="/assets/images/IMG-20230704-WA0002~2.webp" alt="After interior cleaning">
+                        <div class="after-text">After</div>
                     </div>
                     <div class="slider-handle"></div>
                     <div class="slider-line">
@@ -307,25 +277,25 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </div>
             </div>
 
-            <!-- Service 3: Kiletamine -->
+            <!-- Service 3: PPF -->
             <div class="cs-service-showcase" data-aos="fade-right" data-aos-offset="200" data-aos-duration="600" data-aos-delay="0">
                 <div class="cs-service-info">
-                    <h3 class="cs-service-title">Professionaalne kiletamine</h3>
-                    <p class="cs-service-description">Kaitsekile varjab auto originaalvärvi kratsimise ja kulumise eest. Nähtamatu kaitse, mis säilitab auto väärtuse.</p>
+                    <h3 class="cs-service-title">Professional PPF</h3>
+                    <p class="cs-service-description">An invisible shield that preserves your original paint.</p>
                     <div class="cs-service-badges">
-                        <span class="cs-badge">Kaitse</span>
-                        <span class="cs-badge">Väärtus</span>
-                        <span class="cs-badge">Vastupidav</span>
+                        <span class="cs-badge">Protection</span>
+                        <span class="cs-badge">Value</span>
+                        <span class="cs-badge">Durability</span>
                     </div>
                 </div>
-                <div class="slider-container" data-service="kiletamine">
+                <div class="slider-container" data-service="ppf">
                     <div class="before-image">
-                        <img src="/assets/images/IMG-20230630-WA0004~2.webp" alt="Auto enne kiletamist">
-                        <div class="before-text">Enne</div>
+                        <img src="/assets/images/IMG-20230630-WA0004~2.webp" alt="Before PPF">
+                        <div class="before-text">Before</div>
                     </div>
                     <div class="after-image">
-                        <img src="/assets/images/IMG-20230630-WA0006~2.webp" alt="Auto pärast kiletamist">
-                        <div class="after-text">Pärast</div>
+                        <img src="/assets/images/IMG-20230630-WA0006~2.webp" alt="After PPF">
+                        <div class="after-text">After</div>
                     </div>
                     <div class="slider-handle"></div>
                     <div class="slider-line">
@@ -343,13 +313,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </div>
         
         <div class="cs-cta-section">
-            <a class="cs-button-solid" href="/project-one/">Vaata kõiki töid</a>
+            <a class="cs-button-solid" href="/en/project-one/">View all work</a>
         </div>
 
         
     </div>
 </section>
-                                
 
 <!-- ============================================ -->
 <!--                   Reviews                    -->
@@ -358,38 +327,38 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <section id="reviews-2244">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">/ Klientide tagasiside</span>
-            <h2 class="cs-title">Mida räägivad kliendid, kes auto meie hoolde usaldanud</h2>
+            <span class="cs-topper">/ Client feedback</span>
+            <h2 class="cs-title">What our clients say</h2>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <p class="cs-item-text">
-                    Otsisin Tallinnas kohta, kus mu Audile paigaldataks keraamiline kaitse professionaalselt ja õigete toodetega. Siin sain täpselt selle. Töö tehti tähtaegselt ning autol nüüd sügav läige ja vetthülgav pind. Kindlasti toon ka teise auto.
+                    I wanted a proper ceramic coating in Tallinn with the right products and process. That’s exactly what I got here. Done on time with incredible gloss and hydrophobics. I’m bringing my second car too.
                 </p>
                 <div class="cs-reviewer">
                     <div class="cs-name">Kristiina T</div>
                     <div class="cs-stars">★★★★★</div>
-                    <div class="cs-desc">Keraamiline kaitse</div>
+                    <div class="cs-desc">Ceramic coating</div>
                 </div>
             </li>
             <li class="cs-item">
                 <p class="cs-item-text">
-                    Лучший автодетейлинг в Таллине — был здесь три раза, и каждый раз работа выполнялась точно, быстро и в соответствии с обещаниями. Мариус всегда помогает и подсказывает, как сделать так, чтобы машина меньше пачкалась.
+                    Best detailing in Tallinn — precise, fast and as promised. Marius advised how to keep the car cleaner for longer.
                 </p>
                 <div class="cs-reviewer">
-                    <div class="cs-name">Сергей Морозов</div>
+                    <div class="cs-name">Sergey M</div>
                     <div class="cs-stars">★★★★★</div>
-                    <div class="cs-desc">Välispesu + salongi keemiline puhastus</div>
+                    <div class="cs-desc">Wash + interior deep clean</div>
                 </div>
             </li>
             <li class="cs-item">
                 <p class="cs-item-text">
-                    С матовым покрытием всегда боялся что-то повредить, но тут ребята реально знают своё дело. Результат превзошёл все ожидания, цена полностью оправдана.
+                    With matte finishes I was always afraid of damage — they knew exactly what to do. Result exceeded expectations and worth the price.
                 </p>
                 <div class="cs-reviewer">
-                <div class="cs-name">Андрей</div>
+                    <div class="cs-name">Andrei</div>
                     <div class="cs-stars">★★★★★</div>
-                    <div class="cs-desc">Autot taastav poleerimine</div>
+                    <div class="cs-desc">Restorative polishing</div>
                 </div>
             </li>
         </ul>
@@ -398,3 +367,5 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 
 {% endblock %}
+
+

@@ -1,7 +1,7 @@
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}et{% endif %}">
     <head>
         <!-- Standard meta tags -->
         <meta charset="UTF-8">
@@ -15,6 +15,13 @@
         <meta property="og:title" content="{{ title }}"/>
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
+        {% if page.lang and page.lang == 'en' %}
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:locale:alternate" content="et_EE"/>
+        {% else %}
+        <meta property="og:locale" content="et_EE"/>
+        <meta property="og:locale:alternate" content="en_US"/>
+        {% endif %}
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
         <meta property="og:image" content="{{ image or "/assets/images/logo-small.png" }}"/>
         <meta property="og:image:secure_url" content="{{ image or "/assets/images/logo-small.png" }}"/>
@@ -30,9 +37,13 @@
 
         <!-- Preloads -->
         <link rel="preload" as="image" href="/assets/svgs/logo.svg">
+        <link rel="preload" as="image" href="/assets/images/dad-detailing.webp">
 
         <!-- Sitewide Stylesheets and Scripts -->
         <link rel="stylesheet" href="/assets/css/root.css">
+        <!-- AOS (Animate On Scroll) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
         <script defer src="/assets/js/gallery.js"></script>
@@ -41,6 +52,11 @@
         {% block head %}{% endblock %}
 
         <title>{{ title }}</title>
+        {% if page.url and client.domain %}
+            <link rel="alternate" hreflang="et" href="{{ client.domain }}{{ page.url | replace('/en/', '/') }}"/>
+            <link rel="alternate" hreflang="en" href="{{ client.domain }}/en{{ page.url | replace('/en/', '/') }}"/>
+            <link rel="alternate" hreflang="x-default" href="{{ client.domain }}{{ page.url | replace('/en/', '/') }}"/>
+        {% endif %}
     </head>
     <body>
         <!--Screen reader skip main nav-->
@@ -52,5 +68,41 @@
         </main>
         {% include "sections/footer.html" %}
 
+        <!-- Initialize AOS -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-out-quart',
+                    once: true,
+                    offset: 20,
+                    delay: 0,
+                    startEvent: 'DOMContentLoaded',
+                    animatedClassName: 'aos-animate',
+                    initClassName: 'aos-init',
+                    useClassNames: false,
+                    disableMutationObserver: false,
+                    throttleDelay: 99,
+                    debounceDelay: 50
+                });
+
+                // Disable hover effects during animation for services cards
+                const serviceCards = document.querySelectorAll('#services-1628 .cs-card');
+                serviceCards.forEach((card, index) => {
+                    // Add animating class initially
+                    card.classList.add('is-animating');
+                    
+                    // Remove animating class after animation completes
+                    // Calculate total animation time including delay
+                    const animationDelay = index * 150; // Staggered delay
+                    const animationDuration = 800; // Duration from AOS config
+                    const totalTime = animationDelay + animationDuration + 200; // Extra buffer
+                    
+                    setTimeout(() => {
+                        card.classList.remove('is-animating');
+                    }, totalTime);
+                });
+            });
+        </script>
     </body>
 </html>
