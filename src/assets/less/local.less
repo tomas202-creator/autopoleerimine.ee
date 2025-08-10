@@ -63,42 +63,17 @@
             display: block;
             text-decoration: none;
             color: inherit;
+            transition: transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
             
-            // Disable hover effects during animation
-            &.is-animating {
-                pointer-events: none;
-                
-                &:hover {
-                    transform: none;
-                    
-                    .cs-card-inner {
-                        box-shadow: 
-                            0 4px 16px rgba(0, 0, 0, 0.15),
-                            0 1px 4px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .cs-icon-box {
-                        transform: none;
-                        background: var(--primary);
-                        box-shadow: none;
-
-                        svg {
-                            color: var(--bodyTextColor);
-                            filter: none;
-                        }
-                    }
-                }
-            }
-            
-            &:not(.is-animating):hover {
+            &:hover {
                 transform: translateY(-4px);
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 
                 .cs-card-inner {
                     box-shadow: 
                         0 16px 48px rgba(0, 0, 0, 0.25),
                         0 4px 16px rgba(0, 0, 0, 0.15);
-                    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    transition: box-shadow 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
 
                 .cs-icon-box {
@@ -107,14 +82,17 @@
                     box-shadow: 
                         0 8px 24px rgba(0, 0, 0, 0.3),
                         0 2px 8px rgba(0, 0, 0, 0.2);
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    transition: transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                                background 300ms ease,
+                                box-shadow 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
                     svg {
                         color: var(--headerColor);
                         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: all 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     }
                 }
+
             }
 
             // Unique colors for each card's icon
@@ -143,7 +121,7 @@
             box-shadow: 
                 0 4px 16px rgba(0, 0, 0, 0.15),
                 0 1px 4px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: box-shadow 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
             .cs-box {
                 width: 100%;
@@ -165,7 +143,8 @@
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
-                            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                            transition: transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            will-change: transform;
                         }
                     }
                 }

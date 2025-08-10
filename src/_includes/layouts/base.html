@@ -86,22 +86,7 @@
                     debounceDelay: 50
                 });
 
-                // Disable hover effects during animation for services cards
-                const serviceCards = document.querySelectorAll('#services-1628 .cs-card');
-                serviceCards.forEach((card, index) => {
-                    // Add animating class initially
-                    card.classList.add('is-animating');
-                    
-                    // Remove animating class after animation completes
-                    // Calculate total animation time including delay
-                    const animationDelay = index * 150; // Staggered delay
-                    const animationDuration = 800; // Duration from AOS config
-                    const totalTime = animationDelay + animationDuration + 200; // Extra buffer
-                    
-                    setTimeout(() => {
-                        card.classList.remove('is-animating');
-                    }, totalTime);
-                });
+                // Services card animation handling removed per request
             });
         </script>
     </body>
